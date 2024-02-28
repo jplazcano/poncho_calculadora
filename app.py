@@ -58,7 +58,7 @@ def plot_with_plotly(df):
     return fig
 
 st.title('Calculadora de Interés Compuesto, Poncho Capital')
-st.image("/Users/juanpelazcano/Desktop/calculadora_poncho/Flor Bustamane Arias IMG 7778.png", width=200)
+st.image("Flor Bustamane Arias IMG 7778.png", width=200)
 
 P = st.number_input('Cantidad Inicial', min_value=0.0, value=1000.0, step=100.0)
 C = st.number_input('Contribución Mensual', min_value=0.0, value=100.0, step=10.0)
