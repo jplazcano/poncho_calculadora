@@ -206,7 +206,7 @@ if st.button('Calcular'):
     mensaje_promocional_html = f"""
 <div style="padding: 20px; border-radius: 5px; margin-top: 20px; border-left: 4px solid #23AF32; color: #333; background-color: #f9f9f9; border-color: #ddd;">
     <h2 style="color: #23AF32;">¿Listo para comenzar a invertir?</h2>
-    <p>En <a href="https://www.ponchocapital.com" target="_blank" style="font-weight: bold; color: #23AF32;">PonchoCapital.com</a>, hacer crecer tu patrimonio es más fácil de lo que piensas.</p>
+    <p>En <a href="https://www.ponchocapital.com" target="_blank" style="font-weight: bold; color: #23AF32;">PonchoCapital.com</a>, hacer crecer tu patrimonio es más fácil de lo que pensás.</p>
     <ul>
         <li>Comprá dólar MEP de manera sencilla.</li>
         <li>Invertí en Acciones Argentinas.</li>
@@ -219,7 +219,7 @@ if st.button('Calcular'):
 """
 
     st.markdown(mensaje_promocional_html, unsafe_allow_html=True)
-    st.image("Screenshot 2024-03-01 at 15.52.19.png")
+
 
 
 
