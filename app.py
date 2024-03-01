@@ -174,3 +174,54 @@ if st.button('Calcular'):
 
     fig = plot_with_plotly(df)
     st.plotly_chart(fig)
+
+    # Resumen de los valores ingresados y los resultados obtenidos
+    # Resumen con estilos adaptativos para temas claro y oscuro
+    resumen_html = f"""
+<style>
+    .resumen {{
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        border-left: 4px solid #4e73df;
+        background-color: var(--primary-bg);
+        color: var(--font-color);
+    }}
+</style>
+<div class="resumen">
+    <h4>Resultados</h4>
+    <p><b>Cantidad Inicial:</b> ${P:,.2f}</p>
+    <p><b>Contribución Mensual:</b> ${C:,.2f}</p>
+    <p><b>Cantidad de Tiempo en Años:</b> {t} años</p>
+    <p><b>Tasa de Interés Estimada (%):</b> {r}%</p>
+    <p><b>Frecuencia de Capitalización:</b> {capitalization}</p>
+    <p>Al final del período de inversión, tu <b>Valor Futuro</b> estimado será <b>${df['Valor Futuro'].iloc[-1]:,.2f}</b>, habiendo contribuido un total de <b>${df['Contribuciones Totales'].iloc[-1]:,.2f}</b>.</p>
+    <p>Este resumen final te muestra el poder del interés compuesto y cómo tus inversiones pueden crecer a lo largo del tiempo. Al ajustar diferentes parámetros, podé ver cómo cambiarán tus resultados finales, lo que te permite planificar mejor tu futuro financiero.</p>
+</div>
+"""
+
+    st.markdown(resumen_html, unsafe_allow_html=True)
+
+    # Mensaje promocional para PonchoCapital.com
+    mensaje_promocional_html = f"""
+<div style="padding: 20px; border-radius: 5px; margin-top: 20px; border-left: 4px solid #23AF32; color: #333; background-color: #f9f9f9; border-color: #ddd;">
+    <h2 style="color: #23AF32;">¿Listo para comenzar a invertir?</h2>
+    <p>En <a href="https://www.ponchocapital.com" target="_blank" style="font-weight: bold; color: #23AF32;">PonchoCapital.com</a>, hacer crecer tu patrimonio es más fácil de lo que piensas.</p>
+    <ul>
+        <li>Comprá dólar MEP de manera sencilla.</li>
+        <li>Invertí en Acciones Argentinas.</li>
+        <li>Inviertí en gigantes tecnológicos como Amazon, Google y Apple a través de los CEDEARs.</li>
+        <li>Accedé a índices globales como el S&P 500, que históricamente rindió aproximadamente un promedio del 8% anual en dólares.</li>
+        <li>Explorá una amplia gama de Obligaciones Negociables para diversificar tu cartera.</li>
+    </ul>
+    <p>Comenzar a invertir con nosotros es posible en <strong>pocos clicks</strong>. <a href="https://www.ponchocapital.com" target="_blank" style="font-weight: bold; color: #23AF32;">Únete ahora</a> y da el primer paso hacia tu libertad financiera.</p>
+</div>
+"""
+
+    st.markdown(mensaje_promocional_html, unsafe_allow_html=True)
+    st.image("Screenshot 2024-03-01 at 15.52.19.png")
+
+
+
+
+
